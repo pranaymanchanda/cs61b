@@ -1,4 +1,4 @@
-public class NBody {
+public class NBody{
 	public static double readRadius(String name) {
 		In in = new In(name);
 		in.readLine(); // skip the first line
@@ -32,7 +32,7 @@ public class NBody {
 		double dt = Double.parseDouble(args[1]);
 		String filename = args[2];
 
-		/* Read in the planets and the universe radius from the file described by filename*/
+		/* Read in the planets and the universe radius from the file described by filename */
 		Planet[] planets = NBody.readPlanets(filename);
 		double radius = NBody.readRadius(filename);
 
@@ -60,9 +60,12 @@ public class NBody {
 				planets[i].update(dt, xForces[i], yForces[i]);
 			}
 			StdDraw.picture(0, 0, "images/starfield.jpg");
+
 			for (Planet p : planets) {
 				p.draw();
 			}
+
+
 			StdDraw.show(10);
 		}
 
