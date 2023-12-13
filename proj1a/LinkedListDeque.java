@@ -83,7 +83,7 @@ public class LinkedListDeque<T> {
     }
 
     public T get(int index){
-        if (index >= this.size - 1 || index < 0){
+        if (index > this.size - 1 || index < 0){
             return null;
         }
         TNode pointer = sentinel_front;
